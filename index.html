@@ -3,124 +3,115 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Escritório de Advocacia Magnani & Andrade</title>
+  <title>Magnani & Andrade • Advocacia</title>
 
-  <!-- Fontes -->
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
 
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    /* -------------------- RESET BÁSICO -------------------- */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body  { font-family: 'Montserrat', sans-serif; background:#f6f6f6; color:#333; line-height:1.6; }
+    img   { max-width:100%; display:block; }
 
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    /* ---------- CABEÇALHO ---------- */
+    /* -------------------- LAYOUT -------------------- */
     header {
-      background-image: url('https://images.unsplash.com/photo-1584714265081-b43c4ec7ad76?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;w=1500&amp;h=550');
-      background-size: cover;
-      background-position: center;
-      color: #fff;
-      text-shadow: 1px 1px 4px rgba(0,0,0,.7);
-      text-align: center;
-      padding: 70px 20px;
-    }
-    header h1 { font-size: 2.8rem; font-weight: 600; }
-
-    /* ---------- CONTEÚDO ---------- */
-    .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 30px;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,.1);
-      text-align: center;
-    }
-    .container img {
-      max-width: 100%;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-    h2 { color: #1c2e4a; font-size: 1.8rem; margin-bottom: 10px; }
-    p  { font-size: 1.1rem; margin-bottom: 15px; }
-
-    /* ---------- CONTATO ---------- */
-    .contact-info { margin-top: 30px; }
-    .contact-info p { margin: 6px 0; }
-
-    .whatsapp-link {
-      display: inline-flex;
+      position: relative;
+      background: url("https://images.unsplash.com/photo-1555371363-8de9e89e88cd?auto=compress&fit=crop&w=1600&q=80") center/cover no-repeat;
+      height: 55vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      gap: 10px;
-      background: #25D366;
-      color: #fff;
-      padding: 12px 24px;
-      font-weight: 600;
-      font-size: 1.05rem;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background .3s;
-    }
-    .whatsapp-link:hover { background: #1ebe5d; }
-    .whatsapp-link img { width: 24px; height: 24px; }
-
-    /* ---------- RODAPÉ ---------- */
-    footer {
-      margin-top: 40px;
-      background: #1c2e4a;
-      color: #fff;
       text-align: center;
-      padding: 20px 10px;
+      color: #fff;
+    }
+    header::before {                 /* escurece a foto */
+      content: "";
+      position: absolute; inset:0;
+      background: rgba(0,0,0,.55);
+    }
+    header h1, header p { position: relative; z-index:1; }
+    header h1 { font-size: 2.8rem; font-weight:600; }
+    header p  { font-size: 1.2rem; margin-top: 8px; }
+
+    .wrapper   { max-width: 1100px; margin: -90px auto 40px; padding: 0 20px; } /* puxa o card para cima */
+    .card      {
+      background:#fff; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,.08);
+      padding: 50px 40px;
+      text-align:center;
     }
 
-    /* ---------- RESPONSIVO ---------- */
-    @media (max-width: 600px) {
-      header h1 { font-size: 1.9rem; }
-      .container { margin: 20px; padding: 20px; }
+    h2    { color:#1c2e4a; font-size:1.9rem; margin-bottom:10px; }
+    p     { font-size:1.05rem; margin-bottom:16px; }
+
+    /* ------------ CONTATO / CTA ------------ */
+    .contact {
+      margin-top:32px;
+      display:flex; flex-direction:column; gap:6px; align-items:center;
+      font-size:1.05rem;
+    }
+    .whats-btn{
+      margin-top:14px; display:inline-flex; align-items:center; gap:10px;
+      background:#25D366; color:#fff; font-weight:600; font-size:1rem;
+      padding:12px 26px; border-radius:6px; text-decoration:none;
+      transition:background .3s;
+    }
+    .whats-btn:hover{ background:#1ebe5d; }
+
+    footer{
+      background:#1c2e4a; color:#fff; text-align:center;
+      padding:18px 10px; margin-top:40px; font-size:.9rem;
+    }
+
+    /* ------------ RESPONSIVO ------------ */
+    @media (max-width:600px){
+      header h1{ font-size:2rem; }
+      .card    { padding:36px 24px; }
     }
   </style>
 </head>
 <body>
 
+  <!-- HERO / CABEÇALHO -->
   <header>
-    <h1>Magnani &amp; Andrade — Advocacia</h1>
+    <h1>Magnani &amp; Andrade – Advocacia</h1>
     <p>Excelência em Direito Empresarial e Civil</p>
   </header>
 
-  <main class="container">
+  <!-- BLOCO PRINCIPAL -->
+  <main class="wrapper">
+    <section class="card">
 
-    <!-- 1ª imagem: reunião de advogados -->
-    <img 
-      src="https://images.unsplash.com/photo-1597764691344-3b36aa3ea0f8?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;w=1200&amp;h=620" 
-      alt="Advogados em reunião analisando documentos" />
+      <!-- Imagem 1 -->
+      <img 
+        src="https://images.unsplash.com/photo-1521790945508-bf2a36314e85?auto=compress&fit=crop&w=1200&q=80"
+        alt="Advogados reunidos debatendo um caso" />
 
-    <h2>Compromisso com a Justiça e a Ética</h2>
-    <p>Oferecemos soluções jurídicas eficientes com atendimento personalizado para empresas e pessoas físicas.</p>
+      <h2>Compromisso com a Justiça e a Ética</h2>
+      <p>Oferecemos soluções jurídicas personalizadas para empresas e pessoas físicas, com foco em resultados e respeito aos valores dos nossos clientes.</p>
 
-    <!-- 2ª imagem: estátua da justiça -->
-    <img 
-      src="https://images.unsplash.com/photo-1593113598332-3c7b31d61da2?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;w=1000&amp;h=600" 
-      alt="Estátua de Têmis segurando balança da justiça" />
+      <!-- Imagem 2 -->
+      <img 
+        src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=compress&fit=crop&w=1100&q=80"
+        alt="Estátua da Justiça segurando a balança" />
 
-    <section class="contact-info">
-      <h3>Fale conosco</h3>
-      <p>📧 Email: contato@magnaniadvocacia.com.br</p>
-      <p>📞 Telefone: (11) 98765-4321</p>
+      <!-- Dados de contato -->
+      <div class="contact">
+        <strong>📧 contato@magnaniadvocacia.com.br</strong>
+        <strong>📞 (11) 98765-4321</strong>
 
-      <a class="whatsapp-link" href="https://wa.me/5516992523577" target="_blank" rel="noopener">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="Ícone do WhatsApp">
-        WhatsApp
-      </a>
+        <a class="whats-btn" href="https://wa.me/5516992523577" target="_blank" rel="noopener">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="24" height="24" alt="Ícone WhatsApp">
+          Fale pelo WhatsApp
+        </a>
+      </div>
     </section>
-
   </main>
 
+  <!-- RODAPÉ -->
   <footer>
-    &copy; 2025 Magnani &amp; Andrade — Todos os direitos reservados.
+    &copy; 2025 Magnani &amp; Andrade – Todos os direitos reservados.
   </footer>
 
 </body>
