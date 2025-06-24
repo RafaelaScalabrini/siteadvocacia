@@ -28,4 +28,100 @@
       text-align: center;
       padding: 70px 20px;
     }
-    header
+    header h1 { font-size: 2.8rem; font-weight: 600; }
+
+    /* ---------- CONTEÚDO ---------- */
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,.1);
+      text-align: center;
+    }
+    .container img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    h2 { color: #1c2e4a; font-size: 1.8rem; margin-bottom: 10px; }
+    p  { font-size: 1.1rem; margin-bottom: 15px; }
+
+    /* ---------- CONTATO ---------- */
+    .contact-info { margin-top: 30px; }
+    .contact-info p { margin: 6px 0; }
+
+    .whatsapp-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: #fff;
+      padding: 12px 24px;
+      font-weight: 600;
+      font-size: 1.05rem;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background .3s;
+    }
+    .whatsapp-link:hover { background: #1ebe5d; }
+    .whatsapp-link img { width: 24px; height: 24px; }
+
+    /* ---------- RODAPÉ ---------- */
+    footer {
+      margin-top: 40px;
+      background: #1c2e4a;
+      color: #fff;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    /* ---------- RESPONSIVO ---------- */
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.9rem; }
+      .container { margin: 20px; padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Magnani &amp; Andrade — Advocacia</h1>
+    <p>Excelência em Direito Empresarial e Civil</p>
+  </header>
+
+  <main class="container">
+
+    <!-- 1ª imagem: reunião de advogados -->
+    <img 
+      src="https://images.unsplash.com/photo-1597764691344-3b36aa3ea0f8?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;w=1200&amp;h=620" 
+      alt="Advogados em reunião analisando documentos" />
+
+    <h2>Compromisso com a Justiça e a Ética</h2>
+    <p>Oferecemos soluções jurídicas eficientes com atendimento personalizado para empresas e pessoas físicas.</p>
+
+    <!-- 2ª imagem: estátua da justiça -->
+    <img 
+      src="https://images.unsplash.com/photo-1593113598332-3c7b31d61da2?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;w=1000&amp;h=600" 
+      alt="Estátua de Têmis segurando balança da justiça" />
+
+    <section class="contact-info">
+      <h3>Fale conosco</h3>
+      <p>📧 Email: contato@magnaniadvocacia.com.br</p>
+      <p>📞 Telefone: (11) 98765-4321</p>
+
+      <a class="whatsapp-link" href="https://wa.me/5516992523577" target="_blank" rel="noopener">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="Ícone do WhatsApp">
+        WhatsApp
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2025 Magnani &amp; Andrade — Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
