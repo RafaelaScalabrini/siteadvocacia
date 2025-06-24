@@ -1,2 +1,67 @@
-# siteadvocacia
-Site de Advocacia
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escritório de Advocacia Magnani & Andrade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .whatsapp-link {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Magnani & Andrade - Advocacia</h1>
+    </header>
+    <div class="container">
+        <img src="https://via.placeholder.com/400x500" alt="Advogado loiro de olhos verdes bem vestido">
+        <h2>Especialistas em Direito Empresarial e Civil</h2>
+        <p>Atendemos com excelência e compromisso com a justiça.</p>
+        <img src="https://via.placeholder.com/200x200" alt="Balança jurídica de bronze">
+        <h3>Entre em contato conosco:</h3>
+        <p>Email: contato@magnaniadvocacia.com.br</p>
+        <p>Telefone: (11) 98765-4321</p>
+        <a class="whatsapp-link" href="https://wa.me/5516992523577" target="_blank">Fale conosco no WhatsApp</a>
+    </div>
+    <footer>
+        &copy; 2025 Magnani & Andrade - Todos os direitos reservados.
+    </footer>
+</body>
+</html>
+
